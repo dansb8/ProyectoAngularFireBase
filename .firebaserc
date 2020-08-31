@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angularfirebase-da63c": {
+      "hosting": {
+        "ProyectoFireBase": [
+          "angularfirebase-da63c"
+        ]
+      }
+    }
+  }
+}

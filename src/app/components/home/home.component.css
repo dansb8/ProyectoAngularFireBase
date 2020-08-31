@@ -1,0 +1,17 @@
+.banner {
+    height:  15rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#bannerHome{
+    background-image: url("src/assets/images/lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg");
+}
+#bannerProds{
+    background-image: url("src/assets/images/bruno-thethe-2EeUntOpHJ0-unsplash.jpg");
+    /*height: 100px;*/
+}
+#bannerGuides{
+    background-image: url("src/assets/images/bruno-thethe-Evp4iNF3DHQ-unsplash.jpg");
+    /* height: 100px; */
+}

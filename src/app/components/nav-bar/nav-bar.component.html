@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-sm sticky-top navbar-dark bg-dark">
+  <a class="navbar-brand" href="#"><i class="fas fa-gamepad"></i>Ult Consoles</a>
+  <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+              <a class="nav-link" [routerLink]="['/']">Home </a>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+              <a class="nav-link" [routerLink]="['/catalog']">Products</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" *ngIf="isLogged()">
+              <a class="nav-link" [routerLink]="['/admin']">Admin</a>
+          </li>
+      </ul>
+      <div class="nav-item dropdown" *ngIf="!isLogged()">
+        <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">
+          Login
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" >
+          <button class="btn btn-outline-success" type="submit" (click)="login()"><img src="../../../assets/images/btn_google_signin_light_normal_web.png" alt=""></button>
+        </div>
+      </div>
+      <img class="rounded-circle mr-1" src="{{_authFireService.user.profilePic}}" width="30" height="30" alt="" loading="lazy" *ngIf="isLogged()">
+      <div class="nav-item text-white mr-2" *ngIf="isLogged()">{{_authFireService.user.name}}</div>
+      <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="login()">Login</button> -->
+      <button class="btn btn-outline-danger my-2 my-sm-0" type="submit" *ngIf="isLogged()" (click)="logout()">Logout</button>
+  </div>
+</nav>

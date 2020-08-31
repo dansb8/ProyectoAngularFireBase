@@ -117,8 +117,16 @@
               "devServerTarget": "ProyectoFireBase:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
-  "defaultProject": "ProyectoFireBase"
+    }
+  },
+  "defaultProject": "ProyectoFireBase",
+  "cli": {
+    "analytics": false
+  }
 }

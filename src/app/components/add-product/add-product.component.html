@@ -1,0 +1,16 @@
+<p>add-product works!</p>
+<form [formGroup]= "productForm" (ngSubmit)="add()">
+    <label>
+        Name:
+        <input type="text" formControlName="name">
+    </label>
+    <label>
+        Company:
+        <input type="text" formControlName="company">
+    </label>
+    <label>
+        Original Price:
+        <input type="number" formControlName="originalPrice">
+    </label>
+    <button class="btn" type="submit" [disabled]="!productForm.valid">Add Product</button>
+</form>
